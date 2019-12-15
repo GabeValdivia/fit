@@ -15,7 +15,7 @@
         
         <p class="copyright">All Rights Reserved. <?php echo get_bloginfo('name') . " " . date('Y'); ?></p>
     </div>
-
+            <?php wp_footer(); ?>
 </footer>
 
 </body>
