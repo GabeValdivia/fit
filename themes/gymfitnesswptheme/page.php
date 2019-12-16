@@ -1,13 +1,12 @@
 <?php get_header(); ?>
-    <main>
+    <main class="container page section">
         <?php while(have_posts() ): the_post(); ?>
             <h1 class="text-center text-primary"><?php the_title(); ?></h1>
                 
-                <?php 
-                
+                <?php                 
                     //Check if an image exists
                     if( has_post_thumbnail() ):
-                        the_post_thumbnail();
+                        the_post_thumbnail('blog');
                     else:
                         echo "<p> There is no image</p>";
                     endif;
