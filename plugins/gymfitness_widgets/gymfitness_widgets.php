@@ -37,10 +37,14 @@ class GymFitness_Classes_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		echo $args['before_widget']; ?>
         
+        <h2 class="text-primary text-center classes-header">Our Classes</h2>
+
         <ul class="sidebar-classes-list">
             <?php
                 $args = array(
                     'post_type' => 'gymfitness_classes',
+                    'posts_per_page' => 3,
+                    'orderby' => 'rand'
                 );
 
                 $classes = new WP_Query($args);
@@ -55,7 +59,7 @@ class GymFitness_Classes_Widget extends WP_Widget {
 
                 <div class="class-content">
                     <a href="<?php the_permalink(); ?>">
-                    <h3><?php the_title(); ?></h3>
+                    <h3 class="text-primary"><?php the_title(); ?></h3>
                     </a>
 
                     <?php
