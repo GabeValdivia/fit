@@ -14,7 +14,18 @@
 
             ?>
 
-            <h3><?php the_title(); ?></h3>
+            <li class="gym-class card gradient">
+            <?php the_post_thumbnail( 'mediumSize'); ?>
+
+            <div class="card-content">
+                <a href="<?php the_permalink(); ?>">
+                    <h3><?php the_title(); ?></h3>
+                </a>
+            </div>
+
+            
+
+            </li>
 
             <?php endwhile; wp_reset_postdata(); ?>
         </ul>
