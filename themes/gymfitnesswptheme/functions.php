@@ -30,8 +30,17 @@ function gymfitness_scripts() {
     wp_enqueue_script('jquery');
 
     wp_enqueue_script('slicknavjs', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
-
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'gymfitness_scripts');
+
+
+//Enable Feature Images and other stuff
+
+function gymfitness_setup() {
+    
+    //Add Feature Image
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'gymfitness_setup'); //When theme is activated and ready!
