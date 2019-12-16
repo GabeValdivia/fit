@@ -1,7 +1,23 @@
 <?php
 
-    function gymfitness_classes_list() {
-        echo "From the queries.php";
-    }
+    function gymfitness_classes_list() { ?>
+        <ul class="classes-list">
+            <?php
+                $args = array(
+                    'post_type' => 'gymfitness_classes',
+                );
+                // Use WP_Query and append results to $class
+                $classes = new WP_Query($args);
 
-?>
+                while($classes->have_posts()): $classes->the_post();
+
+
+            ?>
+
+            <h3><?php the_title(); ?></h3>
+
+            <?php endwhile; wp_reset_postdata(); ?>
+        </ul>
+    
+
+<?php }
