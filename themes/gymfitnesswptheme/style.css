@@ -344,3 +344,11 @@ body .slicknav_nav a:hover {
     font-size: 2rem;
     margin: 0;
 }
+
+/** Single Class **/
+p.content-class {
+    font-weight: 700;
+    font-family: var(--secondaryFont);
+    font-size: 2.2rem;
+    text-align: center;
+}
