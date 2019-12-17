@@ -6,14 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
             address = document.querySelector('#address').value;
 
 
-    //Add those hidden fields into the map
-    var map = L.map('map').setView([51.505, -0.09], 13);
+   if( lat && lng) {
+        //Add those hidden fields into the map
+    var map = L.map('map').setView([lat,lng], 23);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    L.marker([lat, lng]).addTo(map)
+        .bindPopup(address)
         .openPopup();
+   }
 });
