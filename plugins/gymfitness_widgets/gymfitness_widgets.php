@@ -35,15 +35,20 @@ class GymFitness_Classes_Widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
-		echo $args['before_widget']; ?>
+        echo $args['before_widget'];
         
-        <h2 class="text-primary text-center classes-header">Our Classes</h2>
+        $quantity = $instance['quantity'];
+        ?>
+
+        <h2 class="text-primary text-center classes-header">
+            <?php echo esc_html($instance['title']); ?>
+        </h2>
 
         <ul class="sidebar-classes-list">
             <?php
                 $args = array(
                     'post_type' => 'gymfitness_classes',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $quantity,
                     'orderby' => 'rand'
                 );
 
