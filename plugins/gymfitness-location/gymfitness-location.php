@@ -25,3 +25,16 @@ function gymfitness_location_shortcode() {
 <?php    
 }
 add_shortcode('gymfitness_location', 'gymfitness_location_shortcode'); //[gymfitness_location]
+
+// Enqueues the CSS and JS Files
+function gymfitness_location_scripts() {
+
+    if( is_page('contact-us') ):
+        //Leaflet CSS
+        wp_enqueue_style('leafletcss', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css', array(), '1.6.0');
+        //Leaflet Scripts
+        wp_enqueue_script('leafletjs', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js', array('jquery'), '1.6.0', true);
+    endif;
+
+}
+add_action('wp_enqueue_scripts', 'gymfitness_location_scripts');
