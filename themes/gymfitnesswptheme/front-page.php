@@ -1,0 +1,1 @@
+<h1>From the front page!</h1>
