@@ -20,12 +20,16 @@
             
             <ul class="gallery-images">
                 <?php
+                $i = 0;
                     foreach($gallery_images_ids as $id): 
-                        $image = wp_get_attachment_image_src($id, 'square');?>
-
+                        $size = ($i ===  3 || $i === 6) ? 'portrait' : 'square';
+                        $image = wp_get_attachment_image_src($id, $size);
+                        
+                        ?>
+                        
                         <img src="<?php echo $image[0] ?>" />
                     
-                    <?php endforeach; ?>
+                    <?php $i++; endforeach; ?>
                 ?>
             </ul>
         <?php endwhile; ?>
