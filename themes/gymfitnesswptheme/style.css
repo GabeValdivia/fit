@@ -540,3 +540,8 @@ div.wpcf7-mail-sent-ok {
     padding: 1rem;
     text-align: center;
 }
+
+/** Leaflet Map**/
+#map {
+    height: 300px;
+}
