@@ -1,1 +1,4 @@
-<h1>From the front page!</h1>
+<?php get_header('front'); ?>
+
+
+<?php get_footer(); ?>
