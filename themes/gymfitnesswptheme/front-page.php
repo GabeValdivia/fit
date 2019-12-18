@@ -1,7 +1,7 @@
 <?php get_header('front'); ?>
 
     <?php while(have_posts()): the_post(); ?>
-
+    <!-- Welcome to Gym Fitness Section -->
     <section class="welcome text-center section">
         <h2 class="text-primary"><?php the_field('weclome_heading'); ?></h2>
         <p><?php the_field('welcome_text'); ?></p>
@@ -43,7 +43,7 @@
             </li>
         </ul>
     </section>
-
+    <!-- Our Classes Section -->
     <section class="classes-homepage">
         <div class="container section">
             <h2 class="text-primary text-center">Our Classes</h2>
@@ -56,7 +56,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Our Instructor Section -->
     <section class="instructors">
         <div class="container section">
             <h2 class="text-center">Our Instructors</h2>
@@ -65,6 +65,7 @@
             <?php gymfitness_instructors_list(); ?>
         </div>
     </section>
+    <!-- Testimonials Section -->
 
 <?php endwhile; ?>
 

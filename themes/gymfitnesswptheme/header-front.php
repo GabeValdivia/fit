@@ -34,7 +34,5 @@
             <p><?php the_field('hero_content'); ?></p>
         </div>
     </div><!-- .container -->
-
-    
     
 </header>
