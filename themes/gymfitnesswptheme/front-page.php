@@ -69,7 +69,7 @@
     <section class="testimonials">
         <h2 class="text-center">Testimonials</h2>
 
-        <div class="container">
+        <div class="container-testimonials">
             <ul class="testimonials-list">
                 <?php 
                     $args = array(
@@ -80,7 +80,7 @@
                     while($testimonials->have_posts()): $testimonials->the_post();
                 ?>
 
-                <li class="testimonials text-center">
+                <li class="testimonial-content text-center">
                     <blockquote>
                         <?php the_content(); ?>
                     </blockquote>

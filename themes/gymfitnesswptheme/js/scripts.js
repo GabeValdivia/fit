@@ -5,6 +5,11 @@ jQuery(document).ready(function($){
     });
 
     //Run the bxSlider on Testimonials
-    $('.testimonials-list').bxSlider();
+    $('.testimonials-list').bxSlider({
+        controls: true,
+        mode: 'fade',
+        keyboardEnabled: true,
+        ariaLive: true
+    });
 
 });
