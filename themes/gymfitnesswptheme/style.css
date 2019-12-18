@@ -135,7 +135,29 @@ body.home .site-header {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
+        height: 100%;
     }
+
+    body.home .navigation-bar {
+        grid-column: 1 / 5;
+    }
+}
+
+.tagline {
+    color: var(--white);
+    margin-top: 10rem;
+}
+
+@media (min-width: 768px) {
+    .tagline {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+        margin-top: 0;
+    }
+}
+
+.tagline p {
+    font-size: 2rem;
 }
 /** Menu **/
 
