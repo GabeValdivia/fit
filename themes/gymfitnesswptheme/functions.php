@@ -75,3 +75,14 @@ function gymfitness_widgets() {
     ));
 }
 add_action('widgets_init', 'gymfitness_widgets');
+
+/** Displays the Hero image on the background of header-front.php (front page hereo) **/
+function gymfitness_hero_image() {
+    $front_page_id = get_option('page_on_front');
+    $image_id = get_field('hero_image', $front_page_id );
+
+    echo "<pre>";
+    var_dump($image_id['url']);
+    echo "</pre>";
+}
+add_action('init', 'gymfitness_hero_image');
