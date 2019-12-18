@@ -3,4 +3,8 @@ jQuery(document).ready(function($){
     $('#menu-main-navigation').slicknav({
         //appendTo : '.site-header'
     });
+
+    //Run the bxSlider on Testimonials
+    $('.testimonials-list').bxSlider();
+
 });

@@ -32,6 +32,13 @@ function gymfitness_scripts() {
         //Lightbox CSS
         wp_enqueue_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.1.11');
     endif;    
+
+    //BX Slider CSS
+    if(is_front_page()): 
+        wp_enqueue_style('bxslidercss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
+    endif;
+
+
     /** Load JS Files **/
     wp_enqueue_script('jquery');
 
@@ -39,6 +46,11 @@ function gymfitness_scripts() {
 
     if( basename( get_page_template() ) === 'gallery.php'):
         wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '1.0.10', true);
+    endif;
+
+     //BX Slider Script
+     if(is_front_page()): 
+        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12', true);
     endif;
 
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
