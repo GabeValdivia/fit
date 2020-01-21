@@ -135,6 +135,10 @@ img {
     justify-content: center;
 }
 
+.logo img {
+    max-width: 120px;
+}
+
 .site-header {
     background-color: var(--darkGray);
     padding: 2rem 0;
