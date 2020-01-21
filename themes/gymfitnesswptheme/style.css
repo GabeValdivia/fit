@@ -175,6 +175,7 @@ body.home .site-header {
     height: 100vh;
     min-height: 65rem; /**650px**/
     padding-top: 2rem;
+    background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -768,8 +769,8 @@ div.wpcf7-mail-sent-ok {
 
 .testimonials {
     background: linear-gradient(
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0.75)
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.85)
     ), url(img/testimonial-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
